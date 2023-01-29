@@ -4,7 +4,7 @@ document.querySelector("#name").textContent = myName;
 const currentYear = new Date().getFullYear();
 document.querySelector("#year").textContent = currentYear;
 
-const myImage = "images/profile.jpg";
+const myImage = "images/profile.webp";
 // NOTE: I couldn't find if we had to create the img element and then add the new image
 const newImage = document.createElement("img")
 document.body.appendChild(newImage)
