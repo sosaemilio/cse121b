@@ -38,6 +38,7 @@ function displayPokemon(pokemon) {
     const sprite = document.createElement("img");
     sprite.setAttribute("src", pokemon.sprites.front_default);
     sprite.setAttribute("alt", pokemon.name);
+    sprite.style.backgroundColor = typeColors[pokemon.types[0].type.name]
 
     // Pokemon Name
     const pokemonName = document.createElement("h2");
@@ -46,7 +47,7 @@ function displayPokemon(pokemon) {
 
     //Pokemon ID
     const pokeId = document.createElement("h3");
-    pokeId.textContent = pokemon.id;
+    pokeId.textContent = `National ID #${pokemon.id};`
     pokeId.classList.toggle("poke-id");
     
     // Types or Element
@@ -57,11 +58,11 @@ function displayPokemon(pokemon) {
     pokemonType.forEach(type => {
         let typeText = document.createElement("p");
         typeText.textContent = type.type.name;
-        console.log(type.type.name);
+        typeText.style.backgroundColor = typeColors[type.type.name];
         typesContainer.appendChild(typeText);
     });
 
-    card.appendChild(sprite, pokemonName, pokeId, typesContainer)
+    card.append(sprite, pokemonName, pokeId, typesContainer)
     document.querySelector("main").append(card)
 }
 

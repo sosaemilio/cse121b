@@ -64,9 +64,10 @@ input {
 }
 
 .type p {
-    background-color: aquamarine;
+    color: white;
     padding: 1rem;
     border-radius: 10%;
+    width: 4rem;
 }
 
 ul {
